@@ -1,0 +1,25 @@
+{
+  "name": "sistem-deteksi-edukasi-judi-online",
+  "version": "1.0.0",
+  "description": "Web + backend scaffold for Sistem Deteksi dan Edukasi Judi Online",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "rest-api",
+    "education",
+    "blocked-sites"
+  ],
+  "author": "Jarvis",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.22.2"
+  }
+}

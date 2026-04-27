@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Deteksi dan Edukasi Judi Online</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Sistem Deteksi dan Edukasi Judi Online</h1>
+      <p>Website sederhana untuk deteksi URL, pelaporan user, pengelolaan situs terblokir, dan edukasi bahaya judi online.</p>
+      <nav class="nav">
+        <a href="#detect">Deteksi URL</a>
+        <a href="#blocked">Situs Terblokir</a>
+        <a href="#report">Laporan</a>
+        <a href="#education">Edukasi</a>
+        <a href="#api">API</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card" id="detect">
+      <h2>1. Deteksi URL</h2>
+      <form id="detectForm">
+        <label for="detectUrl">Masukkan URL</label>
+        <input type="text" id="detectUrl" placeholder="Contoh: https://contohjudi-slot.com" required />
+        <button type="submit">Deteksi Sekarang</button>
+      </form>
+      <div id="detectResult" class="result-box"></div>
+    </section>
+
+    <section class="card" id="blocked">
+      <h2>2. Data Situs Terblokir</h2>
+      <div id="blockedSitesList" class="list-box"></div>
+    </section>
+
+    <section class="card" id="report">
+      <h2>3. Kirim Laporan</h2>
+      <form id="reportForm">
+        <label for="reporterName">Nama Pelapor</label>
+        <input type="text" id="reporterName" required />
+        <label for="reportEmail">Email</label>
+        <input type="email" id="reportEmail" />
+        <label for="reportUrl">URL yang Dilaporkan</label>
+        <input type="text" id="reportUrl" required />
+        <label for="reportDescription">Deskripsi</label>
+        <textarea id="reportDescription" rows="4" required></textarea>
+        <button type="submit">Kirim Laporan</button>
+      </form>
+      <div id="reportResult" class="result-box"></div>
+    </section>
+
+    <section class="card" id="education">
+      <h2>4. Materi Edukasi</h2>
+      <div id="educationList" class="list-box"></div>
+    </section>
+
+    <section class="card full-width" id="api">
+      <h2>5. Endpoint API</h2>
+      <div class="api-grid">
+        <div>
+          <h3>Blocked Sites</h3>
+          <ul>
+            <li>GET /api/blocked-sites</li>
+            <li>POST /api/blocked-sites</li>
+            <li>GET /api/blocked-sites/:id</li>
+            <li>PUT /api/blocked-sites/:id</li>
+            <li>DELETE /api/blocked-sites/:id</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Detect</h3>
+          <ul>
+            <li>POST /api/detect</li>
+            <li>GET /api/detect/result</li>
+            <li>GET /api/detect/status</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Report</h3>
+          <ul>
+            <li>POST /api/report</li>
+            <li>GET /api/report</li>
+            <li>GET /api/report/status</li>
+            <li>GET /api/report/:id</li>
+            <li>PUT /api/report/:id</li>
+            <li>DELETE /api/report/:id</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li>GET /api/education</li>
+            <li>GET /api/education/:id</li>
+            <li>GET /api/education/category</li>
+            <li>POST /api/education</li>
+            <li>PUT /api/education/:id</li>
+            <li>DELETE /api/education/:id</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
